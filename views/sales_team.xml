@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="crm_team_inherit_crm_stage" model="ir.ui.view">
+            <field name="name">crm.team.form.inherit</field>
+            <field name="model">crm.team</field>
+            <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
+            <field name="arch" type="xml">
+                    <field name="user_id" position="after">
+                    <field name="state_id"/>
+                    </field>
+
+            </field>
+        </record>
+
+        <record id="crm_dashboard_action" model="ir.actions.client">
+           <field name="name">Dashboard</field>
+           <field name="tag">custom_dashboard</field>
+        </record>
+
+<!--        <record id="crm_dashboard_action" model="ir.actions.act_window">-->
+<!--            <field name="name">Dashboard Report</field>-->
+<!--            <field name="res_model">dashboard.crm</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>
